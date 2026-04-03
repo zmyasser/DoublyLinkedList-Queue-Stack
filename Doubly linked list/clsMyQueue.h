@@ -38,7 +38,7 @@ public:
 		return _MyList.IsEmpty();
 	}
 
-	T front() const
+	const T& front() const
 	{
 		if (_MyList.IsEmpty())
 		{
@@ -48,7 +48,7 @@ public:
 		return _MyList.GetItem(0);
 	}
 
-	T back() const
+	const T& back() const
 	{
 		if (_MyList.IsEmpty())
 		{
@@ -58,10 +58,9 @@ public:
 		return _MyList.GetItem(Size() - 1);
 	}
 
-	T GetItem(size_t Index) const
+	const T& GetItem(size_t Index) const
 	{
 		return _MyList.GetItem(Index);
-
 	}
 
 	void Reverse()
@@ -71,35 +70,28 @@ public:
 
 	bool UpdateItem(size_t Index, const T& NewValue)
 	{
-		_MyList.UpdateItem(Index, NewValue);
-
+		return _MyList.UpdateItem(Index, NewValue);
 	}
 
 	bool InsertAfter(size_t Index, const T& NewValue)
 	{
-		_MyList.InsertAfter(Index, NewValue);
+		return _MyList.InsertAfter(Index, NewValue);
 	}
-
 
 	void InsertAtFront(const T& Value)
 	{
 		_MyList.InsertAtBeginning(Value);
-
 	}
 
 	void InsertAtBack(const T &Value)
 	{
 		_MyList.InsertAtEnd(Value);
-
-
 	}
 
 	void Clear()
 	{
 		_MyList.Clear();
 	}
-
-
 
 };
 

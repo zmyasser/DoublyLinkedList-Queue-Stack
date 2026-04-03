@@ -14,9 +14,9 @@ public:
 		clsMyQueue<T>::_MyList.InsertAtBeginning(Item);
 	}
 
-	T Top() const 
+	const T& Top() const 
 	{
-		if clsMyQueue<T>::IsEmpty()
+		if (clsMyQueue<T>::IsEmpty())
 		{
 			throw std::out_of_range("Stack is empty");
 		}
@@ -24,9 +24,9 @@ public:
 		return clsMyQueue<T>::front();
 	}
 
-	T Bottom() const 
+	const T& Bottom() const 
 	{
-		if clsMyQueue<T>::IsEmpty()
+		if (clsMyQueue<T>::IsEmpty())
 		{
 			throw std::out_of_range("Stack is empty");
 		}

@@ -169,6 +169,7 @@ public:
 
     void Reverse()
     {
+
         Node* current = head;
         Node* temp = nullptr;
 
@@ -219,7 +220,7 @@ public:
         return nullptr;
     }
 
-    T GetItem(size_t index) const
+    const T& GetItem(size_t index) const
     {
         Node* node = GetNode(index);
 
